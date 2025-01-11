@@ -335,3 +335,119 @@ print(panjang)
 print(maksimal)
 print(minimal)
 print(banyak)
+
+print(dict([['name','Dicoding'],['age',17]]))
+
+
+# KUISS
+"""
+TODO:
+Anda diharuskan membuat program diskon untuk sebuah toko belanja dengan ketentuan berikut.
+- Jika pelanggan berbelanja lebih dari 500.000 ribu, mereka akan mendapat potongan harga 10%.
+- Seorang pelanggan bernama Dico telah berbelanja senilai 750.000 ribu.
+- Buat operasi aritmetika untuk menghitung total harga belanja Dico setelah mendapatkan diskon, 
+  dan simpan dalam variabel bernama "total_harga".
+
+Tips:
+- Ingat yang dicari adalah total harga belanja setelah diskon, bukan besaran potongan harga.
+"""
+# Jangan ubah kode ini
+dico = 750000
+
+# TODO: Silakan buat kode Anda di bawah ini.
+if dico >=500000:
+    diskon = 10/100 * dico
+else:
+    diskon= dico
+total_harga = dico - diskon
+print(diskon)
+print(total_harga)
+
+# one liner
+x=1
+y=2
+z=3
+x,y,z = z,x,y
+print(x)
+print(y)
+
+# LIST KOMPREHENSION
+angka = [1, 2, 3, 4]
+pangkat = []
+for n in angka:
+  pangkat.append(n**2)
+print(pangkat)
+
+# KUISS
+"""
+TODO:
+Buatlah sebuah variabel bertipe list bernama "evenNumber" dengan ketentuan:
+- variabel tersebut menampung bilangan genap dari 0 hingga 500 (ingat 0 dan 500 termasuk).
+
+Tips:
+Anda bisa menggunakan loop dan if atau list comprehension untuk memudahkan.
+"""
+
+# TODO: Silakan buat kode Anda di bawah ini.
+# evenNumber = [i%2==0 for i in range(501)]
+# print(evenNumber)
+evenNumber = []
+# for i in range(501):
+#     if i % 2 == 0:
+#         evenNumber.append(i)
+# print(evenNumber)
+
+evenNumber = [i for i in range(501) if i%2 == 0]
+print(evenNumber)
+
+# try except
+x=2
+try:
+    print(0.0+"tr")
+except:
+    print("tidak bisa boss")
+z=0
+try:
+    print(1/z)
+except ZeroDivisionError:
+    print("Anda tidak bisa membagi angka dengan nilai nol.")
+
+var_dict = {"rata_rata": "1.0"}
+
+try:
+    print(f"rata-rata adalah {var_dict['rata_rata']}")
+except KeyError:
+    print("Key tidak ditemukan.")
+except TypeError:
+    print("Anda tidak bisa membagi nilai dengan tipe data string")
+else:
+    print("Kode ini dieksekusi jika tidak ada exception.")
+finally:
+    print("Kode ini dieksekusi terlepas dari ada atau tidaknya exception.")
+
+# error sengaja raise
+# var = -1
+# if var < 0:
+#     raise ValueError("Bilangan negatif tidak diperbolehkan")
+# else:
+#     for i in range(var):
+#         print(i+1)
+
+
+for i in range(1,3):
+    for j in range(1,3):
+        print(i,j)
+
+
+# array dipython itu list
+x = [1, 2, 3, 4, 5] #list
+# array
+import array
+x = array.array("i",[1, 2, 3, 4, 5])
+print(x)
+print(type(x))
+
+siswa = [90, 100, 50, 80, 85, 45, 80, 75, 50, 60]
+for i in siswa:
+    print(i-1)
+
