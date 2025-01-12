@@ -451,3 +451,61 @@ siswa = [90, 100, 50, 80, 85, 45, 80, 75, 50, 60]
 for i in siswa:
     print(i-1)
 
+# deklarasi
+var_arr = [0 for i in range(10)]
+
+for i in range(10):
+    var_arr[i] = i
+
+print(var_arr)
+print(type(var_arr))
+
+var_arr = [1, 2, 3, 4, 5]
+
+for i in range(len(var_arr)):
+    current_element = var_arr[i]
+    next_index = i+1
+    
+    if next_index < len(var_arr):
+        next_element = var_arr[next_index]
+    else:
+        next_element = None
+        
+    print(f"Current element: {current_element}, next elements: {next_element}")
+
+# two pointer 
+var_arr = [1, 7, 2, 89, 3]
+left_pointer = var_arr[0]
+
+for i in range(1, len(var_arr)):
+    right_pointer = var_arr[i]
+    if right_pointer > left_pointer:
+        left_pointer = right_pointer
+
+print(left_pointer)
+
+# KUISS
+"""
+TODO:
+Sebuah variabel array diberikan dengan ketentuan berikut.
+- Variabel array bernama "var_array" dengan nilai dari 0 hingga 100.
+- Hitung nilai rata-rata dari elemen array tersebut.
+- Simpan hasil perhitungan dalam variabel bernama "result".
+
+Tips:
+- Rumus menghitung rata-rata adalah jumlah seluruh elemen dibagi banyaknya elemen.
+- Gunakan percabangan dan perulangan untuk mempermudah, 
+  Anda tidak diperbolehkan memberikan nilai secara langsung.
+"""
+# Jangan ubah kode ini
+var_array = [i for i in range(101)]
+
+# TODO: Silakan buat kode Anda di bawah ini.
+nilai = 0
+for i in range(len(var_array)):
+    nilai += i
+
+result = nilai/len(var_array)
+print(result)
+
+
