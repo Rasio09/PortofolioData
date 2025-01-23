@@ -10,8 +10,17 @@ def fix_date_format(date):
         return pd.to_datetime(date, format='%d/%m/%Y', errors='coerce')
 
 # Membaca data dari file CSV
-file_path = 'main_data.csv'  # Ganti dengan path file Anda
-all_data_df = pd.read_csv(file_path)
+import os
+
+# Pastikan bekerja di direktori tempat skrip berada
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+file_path = "main_data.csv"
+
+if not os.path.exists(file_path):
+    raise FileNotFoundError(f"File '{file_path}' tidak ditemukan di {os.getcwd()}")
+else:
+    all_data_df = pd.read_csv(file_path)
 
 # Memperbaiki format tanggal
 all_data_df['order_estimated_delivery_date'] = all_data_df['order_estimated_delivery_date'].apply(fix_date_format)
