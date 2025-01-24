@@ -1,3 +1,0 @@
-berikut adalah url dashboard streamlit
-
-https://submissiondicoding-analysis-rasio.streamlit.app/
